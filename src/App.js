@@ -3,7 +3,8 @@ import React from 'react';
 // import logo from './logo.svg'; 
 
 import './App.css';
-import ProductsList from './screens/ProductsList'
+
+import ProductsList from './screens/product/index'
 
 function App(){
     return (
