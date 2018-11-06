@@ -6,13 +6,13 @@ import React,{useEffect,useContext} from 'react';
          } from './../../redux/actions'
 
 import {ProductContext} from '../../ProductContext';
-
+import {initMaterialbox} from './../../utilities/form' 
      
 
 function ProductDetails(props){
 
     useEffect(()=>{
-        
+        initMaterialbox()
       });
 
 
@@ -25,9 +25,16 @@ function ProductDetails(props){
 
 
     return(
-  <ul className={`collection grey lighten-3 fixed scale-transition  ${display}`}>
+        
+        <div className='navbar-fixed '>
+        <nav>
+        <div className="nav-wrapper white ">
+  <ul className={`collection product-details   col s4 m6  lighten-3 fixed scale-transition  ${display}`}>
   <ListDetails onClick={()=>{dispatch(hideProductDetailsPage())}}  />
 </ul>
+</div>
+</nav>
+        </div>
 
     )
 

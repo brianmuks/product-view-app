@@ -5,7 +5,7 @@ import List from './List'
 import ProductDetails from './ProductDetails'
 
 
-import {HIDE_ON_PHONE_TABLET,
+import {HIDE_ON_MOBILE_ONLY,
         SHOW_ELEMENT,
         
         HIDE_ELEMENT,
@@ -29,17 +29,20 @@ function ProductList(){
 
     return(
         <ProductContext.Provider value={{productDetailsDisplay,dispatch}}>
-        <div >
-        <div className='col m6 s12'>
+        <div className='row'>
 
   
 
+        <div className='col m6   s12'>
   <ul className={`collection ${mobileCssDisplay}`}>
         <List onClick={(index)=>{dispatch(showProductDetailsPage(index))}}  />
 </ul>
 </div>
-
+<div>
+</div>
+<div className='col m6 s12'>
 <ProductDetails  display={productDetailsDisplay.display} />
+</div>
 </div>
 </ProductContext.Provider>
     )
@@ -49,11 +52,11 @@ function ProductList(){
 
 
 
-function useMediaQueryDisplay(display){
+function useMediaQueryDisplay(productDetailsDisplay){
 
     useEffect(()=>{
-    },[display])
-    return display !== HIDE_ELEMENT ? HIDE_ON_PHONE_TABLET : null
+    },[productDetailsDisplay])
+    return productDetailsDisplay === HIDE_ON_MOBILE_ONLY ? null : HIDE_ON_MOBILE_ONLY
 }
 
 

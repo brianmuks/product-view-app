@@ -15,9 +15,9 @@ import {ProductContext} from './../../ProductContext'
     
      return <li onClick={props.onClick}   className="row">
 
-        <div className='col s12 center '>
-        <img src={image} alt="" className="product-img img-responsive" />
-    <div className='col s12'>
+        <div className='col s12  '>
+        <img src={image} alt="" className=" img-responsive product-details-img" />
+    <div className='col s12 '>
     <span className="title  blue-grey-text fa">
     {name}</span>
     

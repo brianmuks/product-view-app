@@ -1,6 +1,6 @@
 
 import {
-    TOGGLE_PRODUCT_DETAILS_DISPLAY,
+    HIDE_ON_MOBILE_ONLY,
     HIDE_ELEMENT,
     SHOW_ELEMENT,
 } from './../../common/constants'
