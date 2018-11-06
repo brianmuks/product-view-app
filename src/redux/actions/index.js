@@ -7,8 +7,8 @@ import {
 
 
 
-export function showProductDetailsPage(){
-    return {type:SHOW_ELEMENT}
+export function showProductDetailsPage(productIndex){
+    return {type:SHOW_ELEMENT,productIndex}
 }
 
 export function hideProductDetailsPage(){

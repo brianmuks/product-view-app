@@ -8,7 +8,7 @@ export const HIDE_ON_PHONE_TABLET = 'hide-on-med-and-down';
 
 export const TOGGLE_PRODUCT_DETAILS_DISPLAY = 'TOGGLE_PRODUCT_DETAILS_DISPLAY';
 export const PRODUCT_DETAILS_DISPLAY_STATYS = false;
-
+export const INITIAL_PRODUCT_DETAILS = {display:HIDE_ELEMENT,productIndex:0}
 
 
 

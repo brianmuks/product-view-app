@@ -7,23 +7,28 @@ import React,{useEffect,useContext} from 'react';
 
 import {ProductContext} from '../../ProductContext';
 
+     
 
 function ProductDetails(props){
+
+    useEffect(()=>{
+        
+      });
+
 
     const {productDetailsDisplay,dispatch} = useContext(ProductContext)
     const display = productDetailsDisplay.display;
 
     useEffect(()=>{
-        console.log('productDetailsDisplayStatus',display)
-
+        console.log('productDetailsDisplayStatus',productDetailsDisplay)
     })
 
 
     return(
-
-  <ul className={`collection grey lighten-3 scale-transition ${display}`}>
+  <ul className={`collection grey lighten-3 fixed scale-transition  ${display}`}>
   <ListDetails onClick={()=>{dispatch(hideProductDetailsPage())}}  />
 </ul>
+
     )
 
 }

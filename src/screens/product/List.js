@@ -9,7 +9,7 @@ import {_PRODUCTS} from './../../lib/index';
 
     return _PRODUCTS.map((product,key)=>(
     
-    <li onClick={props.onClick}  key={key} className="row">
+    <li onClick={()=>{props.onClick(key)}}  key={key} className="row">
 
         <div className='col s12 center '>
         <img src={product.image} alt="" className="product-img img-responsive" />

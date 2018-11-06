@@ -7,7 +7,9 @@ import ProductDetails from './ProductDetails'
 
 import {HIDE_ON_PHONE_TABLET,
         SHOW_ELEMENT,
-        HIDE_ELEMENT
+        
+        HIDE_ELEMENT,
+        INITIAL_PRODUCT_DETAILS
          } from './../../common/constants'
 
 import {handleProductDetailsDisplay} from './../../redux/reducers/index'
@@ -17,7 +19,7 @@ import { showProductDetailsPage } from '../../redux/actions';
 
 function ProductList(){
 
-    const [productDetailsDisplay,dispatch] = useReducer(handleProductDetailsDisplay,{display:HIDE_ELEMENT});
+    const [productDetailsDisplay,dispatch] = useReducer(handleProductDetailsDisplay,INITIAL_PRODUCT_DETAILS);
     const mobileCssDisplay  =useMediaQueryDisplay(productDetailsDisplay.display);
 
     useEffect(()=>{
@@ -33,7 +35,7 @@ function ProductList(){
   
 
   <ul className={`collection ${mobileCssDisplay}`}>
-        <List onClick={()=>{dispatch(showProductDetailsPage())}}  />
+        <List onClick={(index)=>{dispatch(showProductDetailsPage(index))}}  />
 </ul>
 </div>
 

@@ -17,7 +17,8 @@ export function handleProductDetailsDisplay(state={display:HIDE_ELEMENT},action)
             case SHOW_ELEMENT:
             console.log('SHOW_ELEMENT')
 
-        return {display:SHOW_ELEMENT}
+        return {display:SHOW_ELEMENT,
+                productIndex:action.productIndex}
         default:
        return state;
     }

@@ -1,14 +1,17 @@
-import React,{useEffect,useState} from 'react';
+import React,{useContext} from 'react';
 
 import {getProduct} from './../../lib/index'
 
+import {ProductContext} from './../../ProductContext'
 
 
  function List(props){
     // getProduct
 
+        const {productDetailsDisplay} = useContext(ProductContext);
+        const productIndex = productDetailsDisplay.productIndex;
 
-    const {name,image} = getProduct()
+    const {name,image} = getProduct(productIndex)
     
      return <li onClick={props.onClick}   className="row">
 
